@@ -1,0 +1,47 @@
+{#
+/**
+ * Iconic plugin for Craft CMS
+ *
+ * Iconic Settings.twig
+ *
+ * @author    Nicholas O'Donnell
+ * @copyright Copyright (c) 2016 Nicholas O'Donnell
+ * @link      http://nicholasodo.com
+ * @package   Iconic
+ * @since     1.0.0
+ */
+#}
+
+{% import '_includes/forms' as forms %}
+
+{{ forms.textField({
+    label: 'CDN Link',
+    instructions: 'Enter Font Awesome\'s CDN Link',
+    required: true,
+    id: 'cdnLink',
+    name: 'cdnLink',
+    value: settings.cdnLink
+}) }}
+
+{{ forms.editableTableField({
+    label: 'Icons',
+    instructions: 'Define Redactor II icons here and the Font Awesome equivalent.',
+    id: 'icons',
+    name: 'icons',
+    static: false,
+    rows: settings['icons'],
+    cols: [
+        {
+            heading: 'Icon',
+            type: 'singleline',
+            class: 'code',
+            width: '50%'
+        },
+        {
+            heading: 'Code',
+            type: 'singleline',
+            class: 'code',
+            width: '50%'
+        }
+    ]
+}) }}
