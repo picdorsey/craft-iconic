@@ -7,10 +7,10 @@
  * @copyright Copyright (c) 2016 Nicholas O'Donnell
  * @link      http://nicholasodo.com
  * @package   Iconic
- * @since     1.0.0
+ * @since     1.0.1
  */
 
-var app = {
+var iconic = {
     init: function () {
         this.repalceWithIcons();
     },
@@ -37,6 +37,6 @@ var app = {
 
 document.onreadystatechange = function () {
     if (document.readyState === 'interactive') {
-        app.init();
+        iconic.init();
     }
 }
