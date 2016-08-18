@@ -40,7 +40,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getDescription()
     {
-        return Craft::t('Replaces words with Font Awesome icons on Redactor II.');
+        return Craft::t('Replaces Redactor II toolbar words with Font Awesome icons.');
     }
 
     /**
