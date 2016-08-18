@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2016 Nicholas O'Donnell
  * @link      http://nicholasodo.com
  * @package   Iconic
- * @since     1.0.1
+ * @since     1.0.2
  */
 
 var iconic = {

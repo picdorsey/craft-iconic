@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2016 Nicholas O'Donnell
  * @link      http://nicholasodo.com
  * @package   Iconic
- * @since     1.0.1
+ * @since     1.0.2
  */
 
 namespace Craft;
@@ -64,7 +64,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.1';
+        return '1.0.2';
     }
 
     /**
@@ -180,9 +180,6 @@ class IconicPlugin extends BasePlugin
     private function _renderJS()
     {
         $icons = $this->getSettings()->icons;
-
-        // var_dump(json_encode($icons));
-        // die();
 
         craft()->templates->includeJs('
             var iconsFromSettings = ' . json_encode($icons) . ';
