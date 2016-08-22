@@ -48,7 +48,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/picdorsey/craft-iconic/blob/master/README.md';
+        return 'https://github.com/picdorsey/craft-iconic/blob/master/readme.md';
     }
 
     /**
@@ -80,7 +80,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getDeveloper()
     {
-        return 'Nicholas O\'Donnell';
+        return 'Piccirilli Dorsey, Inc.';
     }
 
     /**
