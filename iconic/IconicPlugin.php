@@ -4,9 +4,9 @@
  *
  * Adds Font Awesome Icons to Redactor II
  *
- * @author    Nicholas O'Donnell
- * @copyright Copyright (c) 2016 Nicholas O'Donnell
- * @link      http://nicholasodo.com
+ * @author    Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
+ * @link      http://picdorsey.com
  * @package   Iconic
  * @since     1.0.2
  */
@@ -48,7 +48,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/nicholasodo/craft-iconic/blob/master/README.md';
+        return 'https://github.com/picdorsey/craft-iconic/blob/master/README.md';
     }
 
     /**
@@ -56,7 +56,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/nicholasodo/craft-iconic/master/releases.json';
+        return 'https://raw.githubusercontent.com/picdorsey/craft-iconic/master/releases.json';
     }
 
     /**
@@ -88,7 +88,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getDeveloperUrl()
     {
-        return 'http://nicholasodo.com';
+        return 'http://picdorsey.com';
     }
 
     /**
