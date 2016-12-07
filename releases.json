@@ -1,11 +1,10 @@
 [
     {
-        "version": "1.0.2",
+        "version": "1.0.3",
         "downloadUrl": "https://github.com/picdorsey/craft-iconic/archive/master.zip",
-        "date": "2016-08-18T10:57:31-04:00",
+        "date": "2016-12-07T11:13:00-04:00",
         "notes": [
-            "[Improved] Updated icon.",
-            "[Improved] General cleanup."
+            "[Fixed] Prevent collision with other plugins.",
         ]
     }
 ]
