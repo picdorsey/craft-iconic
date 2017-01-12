@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   Iconic
- * @since     1.0.3
+ * @since     1.0.4
  */
 
 var iconic = {

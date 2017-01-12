@@ -1,10 +1,10 @@
 [
     {
-        "version": "1.0.3",
+        "version": "1.0.4",
         "downloadUrl": "https://github.com/picdorsey/craft-iconic/archive/master.zip",
-        "date": "2016-12-07T11:13:00-04:00",
+        "date": "2017-01-12T17:00:00-00:00",
         "notes": [
-            "[Fixed] Prevent collision with other plugins.",
+            "[Fixed] Fixed Missing CDN link.",
         ]
     }
 ]

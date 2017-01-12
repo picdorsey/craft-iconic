@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   Iconic
- * @since     1.0.3
+ * @since     1.0.4
  */
 
 namespace Craft;
@@ -22,6 +22,7 @@ class IconicPlugin extends BasePlugin
     {
         parent::init();
         if (craft()->request->isCpRequest()) {
+            $this->_renderCSS();
             $this->_renderJS();
         }
     }
@@ -63,7 +64,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.3';
+        return '1.0.4';
     }
 
     /**
@@ -71,7 +72,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getSchemaVersion()
     {
-        return '1.0.1';
+        return '1.0.0';
     }
 
     /**
@@ -161,6 +162,16 @@ class IconicPlugin extends BasePlugin
         // Modify $settings here...
 
         return $settings;
+    }
+
+    /**
+     * Renders CP css
+     */
+    private function _renderCSS()
+    {
+        $cdnLink = $this->getSettings()->cdnLink;
+
+        craft()->templates->includeCssFile($cdnLink);
     }
 
     /**
