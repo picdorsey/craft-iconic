@@ -10,26 +10,33 @@
  * @since     1.0.4
  */
 
-if (!RedactorPlugins) var RedactorPlugins = {};
-
-RedactorPlugins.iconic = function() { return {
-    /**
-     * Redactor plugin initialization
-     */
+var iconic = {
     init: function () {
-        if (!icons) return;
-        setTimeout(this.iconic.replaceWithIcons, 10); // we have to wait for every other plugins..
+        this.repalceWithIcons();
     },
 
-    replaceWithIcons: function () {
-        var $toolbarActions = $("a", this.$toolbar);
+    repalceWithIcons: function () {
+        var $icons = document.querySelectorAll('.redactor-toolbar a');
 
-        $toolbarActions.each(function(i, a) {
-            var $a = $(a), actionKey = $a.attr("rel");
+        if (typeof $icons == 'undefined') {
+            return;
+        }
 
-            if ( icons[actionKey] ) {
-                $a.html(icons[actionKey]);
+        for (var i = 0; i < $icons.length; i++) {
+            var $icon = $icons[i];
+            var key = $icon.getAttribute('rel');
+
+            if (typeof icons[key] == 'undefined') {
+                continue;
             }
-        });
+
+            $icon.innerHTML = icons[key];
+        }
     }
-}; };
+};
+
+document.onreadystatechange = function () {
+    if (document.readyState === 'interactive') {
+        iconic.init();
+    }
+}
