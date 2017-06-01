@@ -182,9 +182,9 @@ class IconicPlugin extends BasePlugin
         $icons = $this->getSettings()->icons;
 
         craft()->templates->includeJs('
-            var iconsFromSettings = ' . json_encode($icons) . ',
-                icons = {};
-            $.each(iconsFromSettings, function (i, element) {
+            var iconsFromSettings = ' . json_encode($icons) . ';
+            var icons = [];
+            iconsFromSettings.forEach(function (element, index, array) {
                 icons[element[0]] = element[1];
             });
         ');
