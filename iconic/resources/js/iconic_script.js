@@ -7,7 +7,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   Iconic
- * @since     1.0.4
+ * @since     1.0.5
  */
 
 if (!RedactorPlugins) var RedactorPlugins = {};
@@ -23,8 +23,8 @@ RedactorPlugins.iconic = function() { return {
 
     replaceWithIcons: function () {
 
-        $("a", this.$toolbar).each(function(i, a) {
-            var $a = $(a), actionKey = $a.attr("rel");
+        $('a', this.$toolbar).each(function(i, a) {
+            var $a = $(a), actionKey = $a.attr('rel');
 
             if (icons[actionKey]) {
                 $a.html(icons[actionKey]);

@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2016 Piccirilli Dorsey, Inc. (Nicholas O'Donnell)
  * @link      http://picdorsey.com
  * @package   Iconic
- * @since     1.0.4
+ * @since     1.0.5
  */
 
 namespace Craft;
@@ -64,7 +64,7 @@ class IconicPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.4';
+        return '1.0.5';
     }
 
     /**
@@ -183,6 +183,13 @@ class IconicPlugin extends BasePlugin
 
         craft()->templates->includeJs('
             var iconsFromSettings = ' . json_encode($icons) . ';
+
+            if (typeof iconsFromSettings == "object") {
+                iconsFromSettings = Object.keys(iconsFromSettings).map(function (key) {
+                    return iconsFromSettings[key];
+                });
+            }
+
             var icons = [];
             iconsFromSettings.forEach(function (element, index, array) {
                 icons[element[0]] = element[1];
